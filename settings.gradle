@@ -12,5 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "kmm-demo-android"
 include ':app'
+include ':shared'
+project(':shared').projectDir = new File('../kmm-demo-shared/shared')

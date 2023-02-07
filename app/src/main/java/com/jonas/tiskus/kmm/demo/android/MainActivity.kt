@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.jonas.tiskus.kmm.demo.android.ui.theme.KmmdemoandroidTheme
+import com.jonas.tiskus.kmm.demo.shared.Greeting
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    com.jonas.tiskus.kmm.demo.android.Greeting()
                 }
             }
         }
@@ -30,14 +31,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greeting() {
+    Text(text = Greeting().greet())
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     KmmdemoandroidTheme {
-        Greeting("Android")
+        com.jonas.tiskus.kmm.demo.android.Greeting()
     }
 }
