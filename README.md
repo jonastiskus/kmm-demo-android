@@ -1,4 +1,6 @@
 # kmm-demo-android
-Android implementation of KMM shared module as separate projects
+Android implementation of KMP shared module
 
-Make sure to update settings.gradle KMM project file path
+Shared code is included as gradle module in android project.
+
+![alt text](/image.png)
